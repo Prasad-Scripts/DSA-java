@@ -14,31 +14,40 @@ class BinarySearch {
 			array[i] = scanner.nextInt();
 		}
 		
-		System.out.println("");
 		System.out.print("Array: ");
 		
 		for(int i : array) {
-			System.out.print(i);
+			System.out.print(i + " ");
 		}
 		
+		System.out.println();
 		System.out.print("Enter Target Value: ");
 		int target = scanner.nextInt();
 		
 		int result = BinarySearch(array,target);
+		if(result != -1) {
+			System.out.print("Element " + target + " Found at index of " + result);
+		} else {
+			System.out.print("Element Not Found");
+		}
 		
-		
-	}
-	
+	}	
 		static int BinarySearch(int[] array , int target) {
-			int l = 0;
-			int r = array.length - 1;
-			int mid = ((l + r)/2);
+			int low = 0;
+			int high = array.length - 1;
+			int mid;
 			
-			if(array[mid] == target) {
-				return target;
-			} else if(array[mid] < target) {
+			while(low <= high) {
+				mid = (low + high)/2;
 				
-			}
-			
+				if(array[mid] == target) {
+					return mid;
+				} else if(array[mid] > target) {
+					high = mid - 1;
+				} else if(array[mid] < target) {
+					low = mid + 1;
+				}
+			}			
+			return -1;						
 		}
 }
