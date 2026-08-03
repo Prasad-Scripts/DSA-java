@@ -30,6 +30,8 @@ class BinarySearch {
 		} else {
 			System.out.print("Element Not Found");
 		}
+
+		scanner.close();
 		
 	}	
 		static int BinarySearch(int[] array , int target) {
