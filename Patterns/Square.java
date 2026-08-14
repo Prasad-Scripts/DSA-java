@@ -16,3 +16,15 @@ class Square {
 		scanner.close();
 	}
 }
+
+/*
+
+OUTPUT - n : 5
+
+	* * * * *
+	* * * * *
+	* * * * * 
+	* * * * * 
+	* * * * * 
+	
+*/
