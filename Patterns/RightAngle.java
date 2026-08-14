@@ -15,3 +15,15 @@ class RightAngle {
 		scanner.close();
 	}
 }
+
+/*
+
+OUTPUT - n : 5
+
+	* 
+	* * 
+	* * * 
+	* * * * 
+	* * * * * 
+		
+*/
